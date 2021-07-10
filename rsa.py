@@ -73,7 +73,7 @@ def rsa():
 	print("Tin được mã hoá thành C = ",c)
 	print()
 
-	# print("Giải mã")
+	print("Giải mã tính trên trang https://www.mtholyoke.edu/courses/quenell/s2003/ma139/js/powermod.html")
 	# m_giai_ma = np.power([c],[d])
 
 
