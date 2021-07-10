@@ -1,4 +1,5 @@
 import math
+# import numpy as np
 
 def isPrime(n):
 	if n % 2 == 0 and n > 2: 
@@ -9,7 +10,7 @@ def isPrime(n):
 	return True
 
 print("RSA")
-print("Nhập 2 số nguyên tố a và b")
+print("Nhập 2 số nguyên tố p và q")
 
 p = int(input("Nhập p: "))
 q = int(input("Nhập q: "))
@@ -58,8 +59,27 @@ def rsa():
 
 	if(d==0):
 		print('Không tìm được')
+		return
 	else:
 		print("Khoá công khai: n={0}, e={1}".format(n,e))
 		print("Khoá bí mật d={0}".format(int(d)))
+
+	print("Mã hoá tin")
+
+	m = int(input("Nhập mẩu tin M: "))
+
+	c = math.pow(m,e) % n
+
+	print("Tin được mã hoá thành C = ",c)
+	print()
+
+	# print("Giải mã")
+	# m_giai_ma = np.power([c],[d])
+
+
+	# print("M giải mã là: ", m_giai_ma)
+
+
+
 
 rsa()
